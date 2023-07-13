@@ -1,7 +1,7 @@
 import express from "express";
 import http from "http";
 import { Server } from "socket.io";
-import 'dotenv/config'
+import "dotenv/config";
 
 const app = express();
 const server = http.createServer(app);
@@ -38,5 +38,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(process.env.PORT, () => {
-  console.log("✔️ Server listening on port 3001");
+  console.log(`✔️ Server listening on port ${process.env.PORT}`);
 });
